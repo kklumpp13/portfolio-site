@@ -1,0 +1,32 @@
+{
+  "name": "portfolio-site",
+  "private": true,
+  "description": "Personal portfolio site",
+  "version": "0.1.0",
+  "author": "Krystal Klumpp",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.13.50",
+    "gatsby-plugin-styled-components": "^3.1.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kklumpp13/portfolio-site"
+  }
+}
