@@ -8,11 +8,19 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-mdx',
+      // What layout will be used for MDX files
       options: {
         defaultLayouts: {
           default: require.resolve('./src/layout/Layout.js'),
         },
       },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: 'posts'
+      }
     },
   ],
 };
