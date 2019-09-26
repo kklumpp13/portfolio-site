@@ -11,7 +11,7 @@ module.exports = {
       options: {
         mdx: false,
         contentPath: `src/slides`,
-        basePath: '/slides'
+        basePath: '/slides/accessible-forms'
       }
     },
     {
@@ -19,7 +19,7 @@ module.exports = {
       // What layout will be used for MDX files
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/layout/Layout.js'),
+          default: require.resolve('./src/layout/layout.js'),
         },
       },
     },

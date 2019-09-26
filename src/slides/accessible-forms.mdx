@@ -1,0 +1,122 @@
+# Developing accessible forms
+
+- Krystal Klumpp
+- Senior UI Engineer, SoFi
+- Helena, MT
+- kklumpp@sofi.org
+- https://www.linkedin.com/in/krystalklumpp
+- slide link
+
+---
+
+# Why forms?
+
+TODO: List out WCAG requirements
+
+--- 
+
+# Terminology
+
+---
+
+# WCAG
+
+Web Content Accessibility Guidelines
+- WCAG 2.0 (1998)
+- WCAG 2.1 (2018)
+
+---
+
+# Semantic
+
+---
+
+# WAI-ARIA
+
+Web Accessibility Initiative - Accessible Rich Internet Applications
+
+---
+
+"ARIA can both cloak and enhance, creating both power and danger"
+Principle 2
+WAI-ARIA practices documentation https://www.w3.org/TR/wai-aria-practices-1.2/#no_aria_better_bad_aria
+
+---
+
+TODO: Add image
+
+---
+
+# Assistive technology
+
+---
+
+TODO: List out types of AT 
+
+---
+
+# Keyboards
+
+---
+
+# What to look for
+## Functionality
+
+---
+
+# Problem 1: We use HTML in a way that's not quite right
+
+TODO: Demo `<a>` element being used to trigger same-page event.
+- no href
+- `<button type="button">`
+- `tabindex="0"`
+
+---
+
+# Problem 2: JavaScript magic
+
+TODO: Demo for inaccessible custom select
+
+Link: WAI-ARIA 1.1 Authoring practices
+
+---
+
+# Problem 3: ARIA magic
+
+TODO: Demo for `<span>` styled like a button. 
+- `role="button"`
+
+---
+
+# Suggestions: Functionality
+
+- Use built-in keyboard behavior where possible
+- Use HTML instead of roles
+- Test all third-party libraries
+- Become familiar with common keyboard interactions
+
+---
+
+# What to look for: Focus
+
+---
+
+# Problem 1: Focus rings
+
+TODO: Image of different focus rings
+TODO: Image of focus rings against background color
+Link: 2.1 non-text requirement
+
+---
+
+# Problem 2: Disappearing focus
+
+TODO: Demo disappearing focus
+TODO: Table for hiding things
+
+--- 
+
+# Labels
+
+---
+
