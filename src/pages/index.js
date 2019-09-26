@@ -12,6 +12,7 @@ export default () => {
       <h1>Home</h1>
       <p>Hello</p>
       <Link to="/about/">Learn about me</Link>
+      <Link to="/test/">Test</Link>
 
       <h2>Read posts</h2>
       {posts.map(post => (

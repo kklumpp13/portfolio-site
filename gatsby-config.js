@@ -7,6 +7,14 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-theme-mdx-deck',
+      options: {
+        mdx: false,
+        contentPath: `src/slides`,
+        basePath: '/slides'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       // What layout will be used for MDX files
       options: {
