@@ -6,7 +6,6 @@ function Slide({ children }) {
       style={{
         width: '100vw',
         height: '100vh',
-        backgroundColor: 'palevioletred',
       }}>
       {children}
     </main>
