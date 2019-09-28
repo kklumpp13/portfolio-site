@@ -1,3 +1,8 @@
+import highlight from '@mdx-deck/themes/syntax-highlighter-prism';
+import SectionSlide from "../layout/section-slide";
+import Slide from "../layout/slide";
+export const themes = [highlight];
+
 # Developing accessible forms
 
 - Krystal Klumpp
@@ -15,15 +20,23 @@ TODO: List out WCAG requirements
 
 --- 
 
+<SectionSlide>
+
 # Terminology
 
+</SectionSlide>
+
 ---
+
+<Slide>
 
 # WCAG
 
 Web Content Accessibility Guidelines
 - WCAG 2.0 (1998)
 - WCAG 2.1 (2018)
+
+</Slide>
 
 ---
 
@@ -70,6 +83,11 @@ TODO: Demo `<a>` element being used to trigger same-page event.
 - no href
 - `<button type="button">`
 - `tabindex="0"`
+
+
+```HTML
+<button>Text</button>
+```
 
 ---
 
