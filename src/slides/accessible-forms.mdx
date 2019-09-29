@@ -1,0 +1,453 @@
+import highlight from '@mdx-deck/themes/syntax-highlighter-prism';
+import SectionSlide from "../layout/section-slide";
+import Slide from "../layout/slide";
+export const themes = [highlight];
+
+<Slide>
+
+# Developing accessible forms
+
+- Krystal Klumpp
+- Senior UI Engineer, SoFi
+- Helena, MT
+- kklumpp@sofi.org
+- https://www.linkedin.com/in/krystalklumpp
+- slide link
+
+</Slide>
+
+---
+
+<SectionSlide>
+
+# Why forms?
+
+</SectionSlide>
+
+--- 
+
+<Slide>
+
+TODO: List out WCAG requirements
+
+</Slide>
+
+---
+
+<SectionSlide>
+
+# Terminology
+
+</SectionSlide>
+
+---
+
+<Slide>
+
+# WCAG
+
+Web Content Accessibility Guidelines
+- WCAG 2.0 (1998)
+- WCAG 2.1 (2018)
+
+</Slide>
+
+---
+
+<Slide>
+
+# Semantic
+
+</Slide>
+
+---
+
+<Slide>
+
+# WAI-ARIA
+
+Web Accessibility Initiative - Accessible Rich Internet Applications
+
+</Slide>
+
+---
+
+<Slide>
+
+"ARIA can both cloak and enhance, creating both power and danger"
+Principle 2
+WAI-ARIA practices documentation https://www.w3.org/TR/wai-aria-practices-1.2/#no_aria_better_bad_aria
+
+</Slide>
+
+---
+
+<Slide>
+
+TODO: Add image
+
+</Slide>
+
+---
+
+<Slide>
+
+# Assistive technology
+
+</Slide>
+
+---
+
+<Slide>
+
+- Screen readers
+- Screen magnifiers
+- Speech recognition software
+- Refreshable Braille display
+- Eye tracking
+- Joystick
+- Head pointer
+- Sip-and-puff
+- Switches
+- Audio descriptions
+- Transcripts
+- Reader mode
+- Pop-up and animation blockers
+- High contrast mode
+- Custom stylesheets
+- Glasses 
+
+</Slide>
+
+---
+
+<SectionSlide>
+
+# Keyboards
+
+</SectionSlide>
+
+---
+
+<Slide>
+
+# What to look for
+## Functionality
+
+</Slide>
+
+---
+
+<Slide>
+
+# Problem 1: We use HTML in a way that's not quite right
+
+TODO: Demo `<a>` element being used to trigger same-page event.
+- no href
+- `<button type="button">`
+- `tabindex="0"`
+
+
+```HTML
+<button>Text</button>
+```
+
+</Slide>
+
+---
+
+<Slide>
+
+# Problem 2: JavaScript magic
+
+TODO: Demo for inaccessible custom select
+
+Link: WAI-ARIA 1.1 Authoring practices
+
+</Slide>
+
+---
+
+<Slide>
+
+# Problem 3: ARIA magic
+
+TODO: Demo for `<span>` styled like a button. 
+- `role="button"`
+
+</Slide>
+
+---
+
+<Slide>
+
+# Suggestions: Functionality
+
+- Use built-in keyboard behavior where possible
+- Use HTML instead of roles
+- Test all third-party libraries
+- Become familiar with common keyboard interactions
+
+</Slide>
+
+---
+
+<Slide>
+
+# What to look for: Focus
+
+</Slide>
+
+---
+
+<Slide>
+
+# Problem 1: Focus rings
+
+TODO: Image of different focus rings
+TODO: Image of focus rings against background color
+Link: 2.1 non-text requirement
+
+</Slide>
+
+---
+
+<Slide>
+
+# Problem 2: Disappearing focus
+
+TODO: Demo disappearing focus
+TODO: Table for hiding things
+
+</Slide>
+
+--- 
+
+<SectionSlide>
+
+# Labels
+
+</SectionSlide>
+
+---
+
+<Slide>
+
+"59% of the 3.4 million form inputs identified were unlabled."
+[The WebAIM Million](https://webaim.org/projects/million/)
+
+</Slide>
+
+---
+
+<Slide>
+
+# Uconnected labels
+
+TODO: Demo
+Note: Show touch area & SR output
+
+</Slide>
+
+---
+
+<Slide>
+
+# Explicitly connecting a visible label
+
+TODO: Demo
+Note: Show touch area & SR output
+
+</Slide>
+
+---
+
+<Slide>
+
+# Explicitly connecting a hidden label 
+
+TODO: Demo
+Note: Show touch area & SR output
+
+</Slide>
+
+---
+
+<Slide>
+
+# Implicitly connecting a label
+
+TODO: Demo
+Note: Show touch area & SR output
+
+</Slide>
+
+---
+
+<Slide>
+
+# Connecting a visible label with ARIA
+
+TODO: Demo
+Note: Show touch area & SR output
+
+</Slide>
+
+---
+
+<Slide>
+
+# Connecting a hidden label with ARIA
+
+TODO: Demo
+Note: Show touch area & SR output
+
+</Slide>
+
+---
+
+<SectionSlide>
+
+# Grouping inputs
+
+</SectionSlide>
+
+---
+
+<Slide>
+
+Grouped input example (show x is related to y)
+
+</Slide>
+
+---
+
+<Slide>
+
+# Grouping inputs with HTML
+
+TODO: Demo
+
+</Slide>
+
+---
+
+<Slide>
+
+# Grouping inputs with ARIA
+
+TODO: Demo
+
+</Slide>
+
+---
+
+<Slide>
+
+# When to Group
+
+</Slide>
+
+---
+
+<SectionSlide>
+
+# Error prevention
+
+</SectionSlide>
+
+---
+
+<Slide>
+
+TODO: Demo of helper text for sighted users
+
+</Slide>
+
+---
+
+<Slide>
+
+# Placing helper text in a label
+
+TODO: Demo
+TODO: Link to Tenon article
+
+</Slide>
+
+---
+
+<Slide>
+
+# Connecting helper text with ARIA
+
+TODO: Demo 
+
+</Slide>
+
+---
+
+<SectionSlide>
+
+# Error messaging
+
+</SectionSlide>
+
+---
+
+<Slide>
+
+# Letting a user know an error happened
+
+TODO: Demo
+
+</Slide>
+
+---
+
+<Slide>
+
+ARIA settings: Polite vs assertive
+
+</Slide>
+
+---
+
+<Slide>
+
+# Placing error text in a label
+TODO: Demo
+
+</Slide>
+
+---
+
+<Slide>
+
+# Connecting error text with ARIA
+
+</Slide>
+
+---
+
+<Slide>
+
+# Using aria-invalid
+
+</Slide>
+
+---
+
+<SectionSlide>
+
+# Closing
+
+</SectionSlide>
+
+---
+
+<Slide>
+
+# Resources
+
+</Slide>
