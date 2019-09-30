@@ -1,6 +1,7 @@
 import highlight from '@mdx-deck/themes/syntax-highlighter-prism';
 import SectionSlide from "../layout/section-slide";
 import Slide from "../layout/slide";
+import { SpanButton, AriaButton, RegularButton } from '../examples/aria-magic';
 export const themes = [highlight];
 
 <Slide>
@@ -142,14 +143,33 @@ TODO: Add image
 
 # Problem 1: We use HTML in a way that's not quite right
 
-TODO: Demo `<a>` element being used to trigger same-page event.
-- no href
-- `<button type="button">`
-- `tabindex="0"`
+## Expected link behavior
 
+<a href="http://example.com/">Visit example.com</a>
 
-```HTML
-<button>Text</button>
+```html
+<a href="http://example.com/">Visit example.com</a>
+```
+    
+## Problem
+<a>Open</a>
+
+```html
+<a>Open</a>
+```
+
+## Suggested Solution
+
+```jsx
+<button type="button">
+  Text
+</button>
+```
+
+<a tabindex="0">Open</a>
+
+```html
+<a tabindex="0">Open</a>
 ```
 
 </Slide>
@@ -172,8 +192,23 @@ Link: WAI-ARIA 1.1 Authoring practices
 
 # Problem 3: ARIA magic
 
-TODO: Demo for `<span>` styled like a button. 
-- `role="button"`
+<SpanButton />
+
+```html
+<span>Next</span>
+```
+
+<AriaButton />
+
+```html
+<span role="button">Next</span>
+```
+
+<RegularButton />
+
+```html
+<button>Next</button>
+```
 
 </Slide>
 

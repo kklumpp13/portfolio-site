@@ -1,0 +1,1 @@
+export const MediumBlue = "#1771a6";
