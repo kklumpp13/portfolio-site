@@ -1,7 +1,10 @@
 import highlight from '@mdx-deck/themes/syntax-highlighter-prism';
-import SectionSlide from "../layout/section-slide";
-import Slide from "../layout/slide";
+import SectionSlide from '../layout/section-slide';
+import Slide from '../layout/slide';
 import { SpanButton, AriaButton, RegularButton } from '../examples/aria-magic';
+import { NoLabels, ImplicitlyConnectedLabels, ExplicitlyConnectedLabels, ExplicitlyConnectedHiddenLabels, AriaLabel, AriaLabelHidden } from '../examples/labels';
+import { HelperTextInLabel, AriaHelperText } from '../examples/helper-text';
+import { UngroupedInputs, GroupingWithHtml, GroupingWithAria } from '../examples/grouping-inputs';
 export const themes = [highlight];
 
 <Slide>
@@ -279,6 +282,8 @@ TODO: Table for hiding things
 
 # Uconnected labels
 
+<NoLabels />
+
 TODO: Demo
 Note: Show touch area & SR output
 
@@ -289,6 +294,8 @@ Note: Show touch area & SR output
 <Slide>
 
 # Explicitly connecting a visible label
+
+<ExplicitlyConnectedLabels />
 
 TODO: Demo
 Note: Show touch area & SR output
@@ -301,6 +308,8 @@ Note: Show touch area & SR output
 
 # Explicitly connecting a hidden label 
 
+<ExplicitlyConnectedHiddenLabels />
+
 TODO: Demo
 Note: Show touch area & SR output
 
@@ -311,6 +320,8 @@ Note: Show touch area & SR output
 <Slide>
 
 # Implicitly connecting a label
+
+<ImplicitlyConnectedLabels />
 
 TODO: Demo
 Note: Show touch area & SR output
@@ -323,6 +334,8 @@ Note: Show touch area & SR output
 
 # Connecting a visible label with ARIA
 
+<AriaLabel />
+
 TODO: Demo
 Note: Show touch area & SR output
 
@@ -333,6 +346,8 @@ Note: Show touch area & SR output
 <Slide>
 
 # Connecting a hidden label with ARIA
+
+<AriaLabelHidden />
 
 TODO: Demo
 Note: Show touch area & SR output
@@ -353,6 +368,8 @@ Note: Show touch area & SR output
 
 Grouped input example (show x is related to y)
 
+<UngroupedInputs />
+
 </Slide>
 
 ---
@@ -361,7 +378,11 @@ Grouped input example (show x is related to y)
 
 # Grouping inputs with HTML
 
+<GroupingWithHtml />
+
 TODO: Demo
+
+
 
 </Slide>
 
@@ -372,6 +393,8 @@ TODO: Demo
 # Grouping inputs with ARIA
 
 TODO: Demo
+
+<GroupingWithAria />
 
 </Slide>
 
@@ -397,6 +420,8 @@ TODO: Demo
 
 TODO: Demo of helper text for sighted users
 
+<HelperTextInLabel />
+
 </Slide>
 
 ---
@@ -404,6 +429,8 @@ TODO: Demo of helper text for sighted users
 <Slide>
 
 # Placing helper text in a label
+
+<HelperTextInLabel />
 
 TODO: Demo
 TODO: Link to Tenon article
@@ -415,6 +442,8 @@ TODO: Link to Tenon article
 <Slide>
 
 # Connecting helper text with ARIA
+
+  <AriaHelperText />
 
 TODO: Demo 
 

@@ -40,6 +40,21 @@ const GlobalStyle = createGlobalStyle`
   strong {
     color: #222;
   }
+
+  .visually-hidden {
+    clip: rect(0px, 0px, 0px, 0px);
+    height: auto;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+  }
 `;
 
 export default GlobalStyle;
