@@ -26,6 +26,12 @@ export const Label = styled.label`
   margin-bottom: 0.5rem;
 `;
 
+export const LabelText = styled.span`
+  color: #262626;
+  display: block;
+  font-weight: 700;
+`;
+
 export const P = styled.p`
   color: #767676;
   font-size: 1rem;

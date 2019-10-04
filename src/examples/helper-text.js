@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { InputWrapper, Input, Label } from './base-input-labels';
-
-const LabelText = styled.span`
-  color: #262626;
-  display: block;
-  font-weight: 700;
-`;
+import { InputWrapper, Input, Label, LabelText } from './base-input-labels';
 
 const HelperText = styled.span`
   display: block;
@@ -17,7 +11,7 @@ export function HelperTextInLabel() {
   return (
     <InputWrapper>
       <Label htmlFor="htmlEmail">
-        <LabelText>First Name</LabelText>
+        <LabelText>Email</LabelText>
         <HelperText>We will not spam you, or sell or rent your email address.</HelperText>
       </Label>
       <Input type="email" id="htmlEmail" />

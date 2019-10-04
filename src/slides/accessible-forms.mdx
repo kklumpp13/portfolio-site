@@ -1,10 +1,12 @@
 import highlight from '@mdx-deck/themes/syntax-highlighter-prism';
 import SectionSlide from '../layout/section-slide';
 import Slide from '../layout/slide';
+import { DisappearingFocus } from '../examples/keyboard-focus';
 import { SpanButton, AriaButton, RegularButton } from '../examples/aria-magic';
 import { NoLabels, ImplicitlyConnectedLabels, ExplicitlyConnectedLabels, ExplicitlyConnectedHiddenLabels, AriaLabel, AriaLabelHidden } from '../examples/labels';
 import { HelperTextInLabel, AriaHelperText } from '../examples/helper-text';
 import { UngroupedInputs, GroupingWithHtml, GroupingWithAria } from '../examples/grouping-inputs';
+import { ErrorTextInLabel, AriaErrorText, AriaInvalid } from '../examples/error-messages';
 export const themes = [highlight];
 
 <Slide>
@@ -255,6 +257,8 @@ Link: 2.1 non-text requirement
 # Problem 2: Disappearing focus
 
 TODO: Demo disappearing focus
+
+<DisappearingFocus />
 TODO: Table for hiding things
 
 </Slide>
@@ -482,6 +486,8 @@ ARIA settings: Polite vs assertive
 # Placing error text in a label
 TODO: Demo
 
+<ErrorTextInLabel />
+
 </Slide>
 
 ---
@@ -490,6 +496,8 @@ TODO: Demo
 
 # Connecting error text with ARIA
 
+<AriaErrorText />
+
 </Slide>
 
 ---
@@ -497,6 +505,8 @@ TODO: Demo
 <Slide>
 
 # Using aria-invalid
+
+<AriaInvalid />
 
 </Slide>
 
