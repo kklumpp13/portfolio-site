@@ -2,23 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import useToggle from "../hooks/use-toggle";
 
-const StyledAccordionContainer = styled.div`
+const AccordionContainer = styled.div`
   position: relative;
   width: 500px;
   padding-left: .5em;
 `;
 
-function AccordionContainer({ children }) {
-  return (
-    <StyledAccordionContainer>{children}</StyledAccordionContainer>
-  )
-}
-
 const H2 = styled.h2`
   margin-bottom: 0;
 `;
 
-const StyledAccordionContent = styled.div`
+const AccordionContentOffscreen = styled.div`
   left: -500px;
   position: absolute;
   transition: 0.3s all;
@@ -32,13 +26,13 @@ const StyledAccordionContent = styled.div`
 
 function AccordionContent({ expanded }) {
   return (
-    <StyledAccordionContent expanded={expanded}>
+    <AccordionContentOffscreen expanded={expanded}>
       <p>Our answer</p>
       <ul>
         <li><a href="http://example.com">Example.com</a></li>
         <li><a href="http://example.com">Example.com</a></li>
       </ul>
-    </StyledAccordionContent>
+    </AccordionContentOffscreen>
   )
 }
 

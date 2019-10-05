@@ -165,10 +165,8 @@ TODO: Add image
 
 ## Suggested Solution
 
-```jsx
-<button type="button">
-  Text
-</button>
+```html
+<button type="button">Text</button>
 ```
 
 <a tabindex="0">Open</a>
@@ -256,14 +254,15 @@ Link: 2.1 non-text requirement
 
 # Problem 2: Disappearing focus
 
-TODO: Demo disappearing focus
-
 <DisappearingFocus />
-TODO: Table for hiding things
 
 </Slide>
 
 --- 
+
+TODO: Table for hiding things
+
+---
 
 <SectionSlide>
 
@@ -288,7 +287,10 @@ TODO: Table for hiding things
 
 <NoLabels />
 
-TODO: Demo
+```html
+<label>First Name</label>
+<input type="text" />
+```
 Note: Show touch area & SR output
 
 </Slide>
@@ -301,7 +303,10 @@ Note: Show touch area & SR output
 
 <ExplicitlyConnectedLabels />
 
-TODO: Demo
+```html
+<label for="firstName">First Name</label>
+<input type="text" id="firstName" />
+```
 Note: Show touch area & SR output
 
 </Slide>
@@ -314,7 +319,28 @@ Note: Show touch area & SR output
 
 <ExplicitlyConnectedHiddenLabels />
 
-TODO: Demo
+```html
+<label for="firstName">First Name</label>
+<input type="text" id="firstName" />
+```
+
+```css
+.visually-hidden {
+  clip: rect(0px, 0px, 0px, 0px);
+  height: auto;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+```
+
 Note: Show touch area & SR output
 
 </Slide>
@@ -327,7 +353,12 @@ Note: Show touch area & SR output
 
 <ImplicitlyConnectedLabels />
 
-TODO: Demo
+```html
+<label>
+  First Name
+  <input type="text" />
+</label>
+```
 Note: Show touch area & SR output
 
 </Slide>
@@ -340,7 +371,10 @@ Note: Show touch area & SR output
 
 <AriaLabel />
 
-TODO: Demo
+```html
+<p id="firstName">First Name</P>
+<input type="text" aria-labelledby="firstName" />
+```
 Note: Show touch area & SR output
 
 </Slide>
@@ -353,7 +387,10 @@ Note: Show touch area & SR output
 
 <AriaLabelHidden />
 
-TODO: Demo
+```html
+<input type="text" aria-label="First name" />
+```
+
 Note: Show touch area & SR output
 
 </Slide>
@@ -384,9 +421,25 @@ Grouped input example (show x is related to y)
 
 <GroupingWithHtml />
 
-TODO: Demo
-
-
+```html
+<fieldset>
+  <legend>Date of birth</legend>
+  <div>
+    <div>
+      <Label for="month">Month</Label>
+      <Input id="month" type="text" />
+    </div>
+    <div>
+      <Label for="day">Day</Label>
+      <Input id="day" type="text" />
+    </div>
+    <div>
+      <Label for="year">Year</Label>
+      <Input id="year" type="text" />
+    </div>
+  </div>
+</Fieldset>
+```
 
 </Slide>
 
@@ -396,9 +449,27 @@ TODO: Demo
 
 # Grouping inputs with ARIA
 
-TODO: Demo
-
 <GroupingWithAria />
+
+```html
+
+<h3 id="dateOfBirth">Date of birth</h3>
+<div row="group" aria-labelledby="dateOfBirth">
+  <div>
+    <Label for="month">Month</Label>
+    <Input id="month" type="text" />
+  </div>
+  <div>
+    <Label for="day">Day</Label>
+    <Input id="day" type="text" />
+  </div>
+  <div>
+    <Label for="year">Year</Label>
+    <Input id="year" type="text" />
+  </div>
+</div>
+
+```
 
 </Slide>
 
@@ -436,7 +507,13 @@ TODO: Demo of helper text for sighted users
 
 <HelperTextInLabel />
 
-TODO: Demo
+```html
+<label for="htmlEmail">
+  <span>Email</span>
+  <span>We will not spam you, or sell or rent your email address.</span>
+</label>
+<input type="email" id="htmlEmail" />
+```
 TODO: Link to Tenon article
 
 </Slide>
@@ -447,9 +524,15 @@ TODO: Link to Tenon article
 
 # Connecting helper text with ARIA
 
-  <AriaHelperText />
+<AriaHelperText />
 
-TODO: Demo 
+```html
+<label htmlFor="ariaEmail">
+  Email
+</label>
+<input type="email" id="ariaEmail" aria-describedby="emailHelper" />
+<p id="emailHelper">We will not spam you, or sell or rent your email address.</p>
+```
 
 </Slide>
 
@@ -488,6 +571,14 @@ TODO: Demo
 
 <ErrorTextInLabel />
 
+```html
+<label for="firstName">
+  <span>First Name</span>
+  <span>A first name is required.</span>
+</label>
+<input type="text" id="firstName" />
+```
+
 </Slide>
 
 ---
@@ -498,6 +589,14 @@ TODO: Demo
 
 <AriaErrorText />
 
+```html
+<label for="firstName">
+  Email
+</label>
+<input type="text" id="firstName" aria-describedby="firstNameHelper" />
+<p id="firstNameHelper">A first name is required.</p>
+```
+
 </Slide>
 
 ---
@@ -507,6 +606,14 @@ TODO: Demo
 # Using aria-invalid
 
 <AriaInvalid />
+
+```html
+<label for="firstName">
+  <span>First Name</span>
+  <span>A first name is required.</span>
+</label>
+<input type="text" id="firstName" aria-invalid="true" />
+```
 
 </Slide>
 

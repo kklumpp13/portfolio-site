@@ -75,20 +75,6 @@ export function GroupingWithHtml() {
           </InputWrapper>
         </Flex>
       </Fieldset>
-
-      <hr role="presentation" />
-
-      <Fieldset>
-        <Legend>Do you own a home?</Legend>
-        <RadioWrapper>
-          <RadioButton type="radio" id="yes" value="yes" name="home-ownership" />
-          <Label htmlFor="yes">Yes</Label>
-        </RadioWrapper>
-        <RadioWrapper>
-          <RadioButton type="radio" id="no" value="no" name="home-ownership" />
-          <Label htmlFor="no">No</Label>
-        </RadioWrapper>
-      </Fieldset>
     </>
   );
 }
@@ -111,20 +97,6 @@ export function GroupingWithAria() {
           <Input id="year" type="text" />
         </InputWrapper>
       </Flex>
-
-      <hr role="presentation" />
-
-      <h3 id="homeOwnership">Do you own a home?</h3>
-      <div row="radiogroup" aria-labelledby="homeOwnership">
-        <RadioWrapper>
-          <RadioButton type="radio" id="yes" value="yes" name="home-ownership" />
-          <Label htmlFor="yes">Yes</Label>
-        </RadioWrapper>
-        <RadioWrapper>
-          <RadioButton type="radio" id="no" value="no" name="home-ownership" />
-          <Label htmlFor="no">No</Label>
-        </RadioWrapper>
-      </div>
     </>
   );
 }

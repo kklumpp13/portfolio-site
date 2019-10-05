@@ -13,10 +13,6 @@ export function NoLabels() {
         <Label>First Name</Label>
         <Input type="text" />
       </InputWrapper>
-      <InputWrapper>
-        <Label>Last Name</Label>
-        <Input type="text" />
-      </InputWrapper>
     </>
   );
 }
@@ -28,10 +24,6 @@ export function ExplicitlyConnectedLabels() {
         <Label htmlFor="firstName">First Name</Label>
         <Input id="firstName" type="text" />
       </InputWrapper>
-      <InputWrapper>
-        <Label htmlFor="lastName">Last Name</Label>
-        <Input id="firstName" type="text" />
-      </InputWrapper>
     </>
   );
 }
@@ -41,10 +33,6 @@ export function ExplicitlyConnectedHiddenLabels() {
     <>
       <InputWrapper>
         <Label htmlFor="firstName" className="visually-hidden">First Name</Label>
-        <Input id="firstName" type="text" />
-      </InputWrapper>
-      <InputWrapper>
-        <Label htmlFor="lastName" className="visually-hidden">Last Name</Label>
         <Input id="firstName" type="text" />
       </InputWrapper>
     </>
@@ -60,12 +48,6 @@ export function ImplicitlyConnectedLabels() {
           <ImplicitInput type="text" />
         </Label>
       </InputWrapper>
-      <InputWrapper>
-        <Label>
-          Last Name
-          <ImplicitInput type="text" />
-        </Label>
-      </InputWrapper>
     </>
   );
 }
@@ -77,10 +59,6 @@ export function AriaLabel() {
         <P id="firstName">First Name</P>
         <Input type="text" aria-labelledby="firstName" />
       </InputWrapper>
-      <InputWrapper>
-        <P id="lastName">Last Name</P>
-        <Input type="text" aria-labelledby="lastName" />
-      </InputWrapper>
     </>
   );
 }
@@ -89,10 +67,7 @@ export function AriaLabelHidden() {
   return (
     <>
       <InputWrapper>
-        <Input type="text" aria-label="First name" />
-      </InputWrapper>
-      <InputWrapper>
-        <Input type="text" aria-label="Last name" />
+        <Input type="text" aria-label="Search" placeholder="Search" />
       </InputWrapper>
     </>
   );
