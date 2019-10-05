@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import * as color from '../css/colors';
 
 const StyledButton = styled.button`
-  background-color: ${color.MediumBlue};
-  border: 2px solid #00809c;
+  background-color: ${color.mediumBlue};
+  border: 2px solid ${color.mediumBlue};
   border-radius: 2px;
   color: #ffffff;
   font-size: 1rem;

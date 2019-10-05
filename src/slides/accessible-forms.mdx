@@ -7,7 +7,8 @@ import { NoLabels, ImplicitlyConnectedLabels, ExplicitlyConnectedLabels, Explici
 import { HelperTextInLabel, AriaHelperText } from '../examples/helper-text';
 import { UngroupedInputs, GroupingWithHtml, GroupingWithAria } from '../examples/grouping-inputs';
 import { ErrorTextInLabel, AriaErrorText, AriaInvalid } from '../examples/error-messages';
-export const themes = [highlight];
+import customTheme from '../css/slide-theme';
+export const themes = [highlight, customTheme];
 
 <Slide>
 
@@ -426,16 +427,16 @@ Grouped input example (show x is related to y)
   <legend>Date of birth</legend>
   <div>
     <div>
-      <Label for="month">Month</Label>
-      <Input id="month" type="text" />
+      <label for="month">Month</label>
+      <input id="month" type="text" />
     </div>
     <div>
-      <Label for="day">Day</Label>
-      <Input id="day" type="text" />
+      <label for="day">Day</label>
+      <input id="day" type="text" />
     </div>
     <div>
-      <Label for="year">Year</Label>
-      <Input id="year" type="text" />
+      <label for="year">Year</label>
+      <input id="year" type="text" />
     </div>
   </div>
 </Fieldset>
@@ -456,16 +457,16 @@ Grouped input example (show x is related to y)
 <h3 id="dateOfBirth">Date of birth</h3>
 <div row="group" aria-labelledby="dateOfBirth">
   <div>
-    <Label for="month">Month</Label>
-    <Input id="month" type="text" />
+    <label for="month">Month</label>
+    <input id="month" type="text" />
   </div>
   <div>
-    <Label for="day">Day</Label>
-    <Input id="day" type="text" />
+    <label for="day">Day</label>
+    <input id="day" type="text" />
   </div>
   <div>
-    <Label for="year">Year</Label>
-    <Input id="year" type="text" />
+    <label for="year">Year</label>
+    <input id="year" type="text" />
   </div>
 </div>
 
