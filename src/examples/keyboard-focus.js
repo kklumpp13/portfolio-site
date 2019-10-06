@@ -117,21 +117,19 @@ export function DisappearingFocus() {
   const [isExpanded, setIsExpanded] = useToggle(false);
 
   return (
-    <>
-      <Flexbox>
-        <AccordionContainer>
-          <H2><AccordionButton onClick={setIsExpanded}>Expandable content</AccordionButton></H2>
-          <AccordionContent expanded={isExpanded} />
-        </AccordionContainer>
-        <div>
-          <H2>A list of resources</H2>
-          <ul>
-            <li><Link href="#">Resource one</Link></li>
-            <li><Link href="#">Resource two</Link></li>
-          </ul>
-        </div>
-      </Flexbox>
-    </>
+    <Flexbox>
+      <AccordionContainer>
+        <H2><AccordionButton onClick={setIsExpanded}>Expandable content</AccordionButton></H2>
+        <AccordionContent expanded={isExpanded} />
+      </AccordionContainer>
+      <div>
+        <H2>A list of resources</H2>
+        <ul>
+          <li><Link href="#">Resource one</Link></li>
+          <li><Link href="#">Resource two</Link></li>
+        </ul>
+      </div>
+    </Flexbox>
   )
 }
 
