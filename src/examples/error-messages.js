@@ -9,6 +9,13 @@ const ErrorText = styled.span`
   color: #d20023;
 `;
 
+const P = styled.p`
+  color: #d20023;
+  font-size: 2rem;  
+  line-height: 1.5;
+  margin-top: 16px;
+`;
+
 const InputWithError = styled(Input)`
   border-color: #d20023;
 `;
@@ -32,7 +39,7 @@ export function AriaErrorText() {
         Email
       </Label>
       <InputWithError type="text" id="firstName" aria-describedby="firstNameHelper" />
-      <ErrorText as="p" id="firstNameHelper"><FaExclamationCircle />A first name is required.</ErrorText>
+      <P id="firstNameHelper"><FaExclamationCircle />A first name is required.</P>
     </InputWrapper>
   );
 }

@@ -1,14 +1,16 @@
 import styled from 'styled-components';
-// import * as color from '../css/colors';
+import { primaryText } from '../css/colors';
 
 export const InputWrapper = styled.div`
   margin-bottom: 30px;
+  max-width: 100%;
 `;
 
 export const Input = styled.input`
   border: 2px solid #949494;
   border-radius: 2px;
   color: #222222;
+  font-size: 2rem;
   padding: 0.5rem 1rem;
   width: 100%;
 
@@ -20,21 +22,21 @@ export const Input = styled.input`
 `;
 
 export const Label = styled.label`  
-  color: #767676;
+  color: ${primaryText};
   display: block;
-  font-size: 1rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 `;
 
 export const LabelText = styled.span`
-  color: #262626;
+  color: ${primaryText};
   display: block;
-  font-weight: 700;
+  font-weight: bold;
 `;
 
 export const P = styled.p`
-  color: #767676;
-  font-size: 1rem;
+  color: ${primaryText};
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 `;
 
@@ -61,7 +63,7 @@ export const RadioButton = styled.input`
     color: #262626;
     display: inline-block;
     margin: 3px 0;
-    padding-left: 2.125rem;
+    padding-left: 2.5rem;
   }
 
   + label::before {
@@ -69,11 +71,10 @@ export const RadioButton = styled.input`
     border-radius: 50%;
     content: "";
     display: block;
-    height: 1.5rem;
+    height: 2rem;
     left: 0;
     position: absolute;
-    top: 0.0625rem;
-    width: 1.5rem;
+    width: 2rem;
   }
 
   &:checked + label::before {
@@ -86,10 +87,10 @@ export const RadioButton = styled.input`
     box-shadow: rgb(96, 143, 191) 0px 0px 0px 3px;
     border-radius: 4px;
     content: "";
-    height: 1.625rem;
-    left: -0.0625rem;
+    height: 2rem;
+    left: 0;
     position: absolute;
-    top: 0;
-    width: 1.625rem;
+    top: 1rem;
+    width: 2rem;
   }
 `;

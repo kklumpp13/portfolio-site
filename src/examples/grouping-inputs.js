@@ -10,7 +10,8 @@ const Fieldset = styled.fieldset`
 
 const Legend = styled.legend`
   color: #262626;
-  font-size: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 `;
 
@@ -18,12 +19,23 @@ const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  > div {
+    flex-grow: 1;
+    flex-basis: calc(30% - 10px);
+    margin-right: 30px;
+  }
+`;
+
+const H3 = styled.h3`
+  font-size: 2.5rem;
+  margin-bottom: 16px;
 `;
 
 export function UngroupedInputs() {
   return (
     <>
-      <h3>Date of birth</h3>
+      <H3>Date of birth</H3>
       <Flex>
         <InputWrapper>
           <Label htmlFor="month">Month</Label>
@@ -41,7 +53,7 @@ export function UngroupedInputs() {
 
       <hr role="presentation" />
 
-      <h3>Do you own a home?</h3>
+      <H3>Do you own a home?</H3>
       <RadioWrapper>
         <RadioButton type="radio" id="yes" value="yes" name="home-ownership" />
         <Label htmlFor="yes">Yes</Label>
@@ -82,7 +94,7 @@ export function GroupingWithHtml() {
 export function GroupingWithAria() {
   return (
     <>
-      <h3 id="dateOfBirth">Date of Birth</h3>
+      <H3 id="dateOfBirth">Date of Birth</H3>
       <Flex row="group" aria-labelledby="dateOfBirth">
         <InputWrapper>
           <Label htmlFor="month">Month</Label>

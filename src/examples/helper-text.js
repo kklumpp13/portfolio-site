@@ -7,12 +7,18 @@ const HelperText = styled.span`
   line-height: 1.5; 
 `;
 
+const P = styled.p`
+  font-size: 2rem;  
+  line-height: 1.5;
+  margin-top: 16px;
+`;
+
 export function HelperTextInLabel() {
   return (
     <InputWrapper>
       <Label htmlFor="htmlEmail">
         <LabelText>Email</LabelText>
-        <HelperText>We will not spam you, or sell or rent your email address.</HelperText>
+        <HelperText>We will not spam you, or sell your email address.</HelperText>
       </Label>
       <Input type="email" id="htmlEmail" />
     </InputWrapper>
@@ -26,7 +32,7 @@ export function AriaHelperText() {
         Email
       </Label>
       <Input type="email" id="ariaEmail" aria-describedby="emailHelper" />
-      <HelperText as="p" id="emailHelper">We will not spam you, or sell or rent your email address.</HelperText>
+      <P id="emailHelper">We will not spam you, or sell your email address.</P>
     </InputWrapper>
   );
 }

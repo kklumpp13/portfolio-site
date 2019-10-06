@@ -6,6 +6,21 @@ const ImplicitInput = styled(Input)`
   margin-top: 0.5rem;
 `;
 
+const HiddenLabel = styled(Label)`
+  clip: rect(0px, 0px, 0px, 0px);
+  height: auto;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+`;
+
 export function NoLabels() {
   return (
     <>
@@ -32,8 +47,8 @@ export function ExplicitlyConnectedHiddenLabels() {
   return (
     <>
       <InputWrapper>
-        <Label htmlFor="firstName" className="visually-hidden">First Name</Label>
-        <Input id="firstName" type="text" />
+        <HiddenLabel htmlFor="search" className="visually-hidden">Search</HiddenLabel>
+        <Input id="search" type="text" placeholder="Search" />
       </InputWrapper>
     </>
   );

@@ -7,7 +7,7 @@ const StyledButton = styled.button`
   border: 2px solid ${color.mediumBlue};
   border-radius: 2px;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.012rem;
   line-height: 1.5;

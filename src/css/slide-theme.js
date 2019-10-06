@@ -17,6 +17,9 @@ export default {
     },
     code: {
       fontSize: '2rem'
+    },
+    a: {
+      fontSize: '2rem'
     }
   },
   fonts: {

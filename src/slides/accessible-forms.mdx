@@ -2,7 +2,8 @@ import highlight from '@mdx-deck/themes/syntax-highlighter-prism';
 import SectionSlide from '../layout/section-slide';
 import Slide from '../layout/slide';
 import FullWidthSlide from '../layout/slide-full-width';
-import { DisappearingFocus } from '../examples/keyboard-focus';
+import { Link, UnstyledButton } from '../examples/keyboard-functionality';
+import { DisappearingFocus, FocusRingContrast } from '../examples/keyboard-focus';
 import { SpanButton, AriaButton, RegularButton } from '../examples/aria-magic';
 import { NoLabels, ImplicitlyConnectedLabels, ExplicitlyConnectedLabels, ExplicitlyConnectedHiddenLabels, AriaLabel, AriaLabelHidden } from '../examples/labels';
 import { HelperTextInLabel, AriaHelperText } from '../examples/helper-text';
@@ -37,6 +38,8 @@ export const themes = [highlight, customTheme];
 --- 
 
 <FullWidthSlide>
+
+  # WCAG 2.1 success criteria
 
 <Flexbox>
   <ul>
@@ -173,9 +176,11 @@ Web Accessibility Initiative - Accessible Rich Internet Applications
 
 <Slide>
 
-"ARIA can both cloak and enhance, creating both power and danger"
-Principle 2
-WAI-ARIA practices documentation https://www.w3.org/TR/wai-aria-practices-1.2/#no_aria_better_bad_aria
+  # Principle 2
+
+> "ARIA can both cloak and enhance, creating both power and danger"
+
+
 
 </Slide>
 
@@ -240,41 +245,50 @@ TODO: Add image
 
 ---
 
-<Slide>
+<SectionSlide>
 
-# What to look for
-## Functionality
+# Keyboard functionality
 
-</Slide>
+</SectionSlide>
 
 ---
 
 <Slide>
 
-# Problem 1: We use HTML in a way that's not quite right
+# HTML usage
 
-## Expected link behavior
+Expected link behavior
 
-<a href="http://example.com/">Visit example.com</a>
+<Link href="http://example.com">Visit example.com</Link>
+
 
 ```html
 <a href="http://example.com/">Visit example.com</a>
 ```
     
-## Problem
-<a>Open</a>
+...but what if the link doesn't have an `href`?
+
+<Link>Open</Link>
 
 ```html
 <a>Open</a>
 ```
+
+</Slide>
+
+---
+
+<Slide>
 
 ## Suggested Solution
 
+<UnstyledButton type="button">Open</UnstyledButton>
+
 ```html
-<button type="button">Text</button>
+<button type="button">Open</button>
 ```
 
-<a tabindex="0">Open</a>
+<Link tabindex="0">Open</Link>
 
 ```html
 <a tabindex="0">Open</a>
@@ -286,19 +300,17 @@ TODO: Add image
 
 <Slide>
 
-# Problem 2: JavaScript magic
+# JavaScript magic
 
 TODO: Demo for inaccessible custom select
 
-Link: WAI-ARIA 1.1 Authoring practices
-
 </Slide>
 
 ---
 
 <Slide>
 
-# Problem 3: ARIA magic
+# ARIA magic
 
 <SpanButton />
 
@@ -322,34 +334,25 @@ Link: WAI-ARIA 1.1 Authoring practices
 
 ---
 
-<Slide>
+<SectionSlide>
 
-# Suggestions: Functionality
+# Keyboard focus
 
-- Use built-in keyboard behavior where possible
-- Use HTML instead of roles
-- Test all third-party libraries
-- Become familiar with common keyboard interactions
-
-</Slide>
+</SectionSlide>
 
 ---
 
 <Slide>
 
-# What to look for: Focus
-
-</Slide>
-
----
-
-<Slide>
-
-# Problem 1: Focus rings
+# Focus rings
 
 TODO: Image of different focus rings
-TODO: Image of focus rings against background color
-Link: 2.1 non-text requirement
+
+
+<Flexbox>
+  <FocusRingContrast />
+  <FocusRingContrast isDark />
+</Flexbox>
 
 </Slide>
 
@@ -357,17 +360,13 @@ Link: 2.1 non-text requirement
 
 <Slide>
 
-# Problem 2: Disappearing focus
+# Disappearing focus
 
 <DisappearingFocus />
 
 </Slide>
 
 --- 
-
-TODO: Table for hiding things
-
----
 
 <SectionSlide>
 
@@ -377,12 +376,12 @@ TODO: Table for hiding things
 
 ---
 
-<Slide>
+<SectionSlide>
 
-"59% of the 3.4 million form inputs identified were unlabled."
+> "59% of the 3.4 million form inputs identified were unlabled."
 [The WebAIM Million](https://webaim.org/projects/million/)
 
-</Slide>
+</SectionSlide>
 
 ---
 
@@ -396,7 +395,6 @@ TODO: Table for hiding things
 <label>First Name</label>
 <input type="text" />
 ```
-Note: Show touch area & SR output
 
 </Slide>
 
@@ -412,7 +410,6 @@ Note: Show touch area & SR output
 <label for="firstName">First Name</label>
 <input type="text" id="firstName" />
 ```
-Note: Show touch area & SR output
 
 </Slide>
 
@@ -425,8 +422,8 @@ Note: Show touch area & SR output
 <ExplicitlyConnectedHiddenLabels />
 
 ```html
-<label for="firstName">First Name</label>
-<input type="text" id="firstName" />
+<label for="search">Search</label>
+<input type="text" id="search" placeholder="Search" />
 ```
 
 ```css
@@ -446,8 +443,6 @@ Note: Show touch area & SR output
 }
 ```
 
-Note: Show touch area & SR output
-
 </Slide>
 
 ---
@@ -464,7 +459,6 @@ Note: Show touch area & SR output
   <input type="text" />
 </label>
 ```
-Note: Show touch area & SR output
 
 </Slide>
 
@@ -480,7 +474,6 @@ Note: Show touch area & SR output
 <p id="firstName">First Name</P>
 <input type="text" aria-labelledby="firstName" />
 ```
-Note: Show touch area & SR output
 
 </Slide>
 
@@ -493,10 +486,8 @@ Note: Show touch area & SR output
 <AriaLabelHidden />
 
 ```html
-<input type="text" aria-label="First name" />
+<input type="text" aria-label="Search" placeholder="Search" />
 ```
-
-Note: Show touch area & SR output
 
 </Slide>
 
@@ -511,8 +502,6 @@ Note: Show touch area & SR output
 ---
 
 <Slide>
-
-Grouped input example (show x is related to y)
 
 <UngroupedInputs />
 
@@ -530,19 +519,10 @@ Grouped input example (show x is related to y)
 <fieldset>
   <legend>Date of birth</legend>
   <div>
-    <div>
-      <label for="month">Month</label>
-      <input id="month" type="text" />
-    </div>
-    <div>
-      <label for="day">Day</label>
-      <input id="day" type="text" />
-    </div>
-    <div>
-      <label for="year">Year</label>
-      <input id="year" type="text" />
-    </div>
+    <label for="month">Month</label>
+    <input id="month" type="text" />
   </div>
+  ...
 </Fieldset>
 ```
 
@@ -564,14 +544,7 @@ Grouped input example (show x is related to y)
     <label for="month">Month</label>
     <input id="month" type="text" />
   </div>
-  <div>
-    <label for="day">Day</label>
-    <input id="day" type="text" />
-  </div>
-  <div>
-    <label for="year">Year</label>
-    <input id="year" type="text" />
-  </div>
+  ...
 </div>
 
 ```
@@ -583,6 +556,8 @@ Grouped input example (show x is related to y)
 <Slide>
 
 # When to Group
+- Multiple choice questions
+- Multiple related fields
 
 </Slide>
 
@@ -598,7 +573,7 @@ Grouped input example (show x is related to y)
 
 <Slide>
 
-TODO: Demo of helper text for sighted users
+# Helper text
 
 <HelperTextInLabel />
 
@@ -613,13 +588,12 @@ TODO: Demo of helper text for sighted users
 <HelperTextInLabel />
 
 ```html
-<label for="htmlEmail">
+<label for="email">
   <span>Email</span>
-  <span>We will not spam you, or sell or rent your email address.</span>
+  <span>We will not spam you, or sell your email address.</span>
 </label>
-<input type="email" id="htmlEmail" />
+<input type="email" id="email" />
 ```
-TODO: Link to Tenon article
 
 </Slide>
 
@@ -636,7 +610,7 @@ TODO: Link to Tenon article
   Email
 </label>
 <input type="email" id="ariaEmail" aria-describedby="emailHelper" />
-<p id="emailHelper">We will not spam you, or sell or rent your email address.</p>
+<p id="emailHelper">We will not spam you, or sell your email address.</p>
 ```
 
 </Slide>
@@ -672,7 +646,6 @@ ARIA settings: Polite vs assertive
 <Slide>
 
 # Placing error text in a label
-TODO: Demo
 
 <ErrorTextInLabel />
 
