@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { primaryText } from '../css/colors';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -12,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     margin: 0;
-    color: #555;
+    color: ${primaryText};
     font-size: 100%;
     line-height: 1.5;
 
@@ -29,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #222;
+    color: ${primaryText};
     font-family: 'Fira Sans', sans-serif;
   
     + * + {
@@ -38,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   strong {
-    color: #222;
+    color: ${primaryText};
   }
 
   .visually-hidden {
