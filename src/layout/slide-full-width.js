@@ -9,13 +9,9 @@ const Main = styled.main`
 const Div = styled.div`
   margin: 0 auto;
   padding: .8rem;
-
-  @media screen and (min-width: 61.25em) {
-    max-width: 80%;
-  }
 `;
 
-function Slide({ children }) {
+function FullWidthSlide({ children }) {
   return (
     <Main>
       <Div>
@@ -25,4 +21,4 @@ function Slide({ children }) {
   )
 }
 
-export default Slide;
+export default FullWidthSlide;

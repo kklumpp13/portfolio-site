@@ -1,15 +1,21 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const Main = styled.main`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 function SectionSlide({ children }) {
   return (
-    <main
-      style={{
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: 'tomato',
-      }}>
-      {children}
-    </main>
+    <Main>
+      <div>
+        {children}
+      </div>
+    </Main>
   )
 }
 
