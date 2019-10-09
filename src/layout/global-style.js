@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { primaryText } from '../css/colors';
+import { mediumBlue, lightGray, primaryText, white } from '../css/colors';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -35,6 +35,36 @@ const GlobalStyle = createGlobalStyle`
   
     + * + {
       margin-top: 0.5rem;
+    }
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  a {
+    border: 1px solid ${white};
+    border-radius: 2px;
+    color: ${mediumBlue};
+    padding: 4px;
+
+    &:hover {
+      background-color: ${lightGray};
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid ${mediumBlue}
     }
   }
 

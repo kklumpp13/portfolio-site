@@ -7,11 +7,11 @@ import Footer from './footer';
 import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Main = styled.main`
-  margin: 16px auto 48px;
-  border: 1px solid pink;
+  margin: 0 auto;
 
-  @media screen and (min-width: 49.1875em) {
-    max-width: 70rem; 
+  // Max-width: 14400px
+  @media screen and (min-width: 62.5em) {
+    max-width: 90rem; 
   }
 `;
 
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700|Roboto:400,500,700&display=swap" rel="stylesheet" />
       </Helmet>
       <Header />
       <Main>
