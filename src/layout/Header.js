@@ -1,49 +1,54 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { darkGray, primaryText, white } from '../css/colors';
 
+const StyledHeader = styled.header`
+background: ${white};
+border-bottom: 1px solid ${darkGray};
+display: flex;
+padding: 0 13.75rem;
+`;
+
+// TODO: Touch target for links
 const NavLink = styled(Link)`
-  color: #222;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0 0.5rem 0 0;
-  padding: 0.25rem;
+  color: ${primaryText};
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-right: 32px;
+  padding: 0.5rem .75rem;
   text-decoration: none;
 
   &.current-page {
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid ${darkGray};
   }
 
   &:last-of-type {
     margin-right: 0;
+    margin-top: 0;
   }
 `;
 
-const Header = () => (
-  <header
-    css={css`
-      background: #eee;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem calc((100vw - 550px) / 2);
-    `}
-  >
-    <NavLink to="/">Home</NavLink>
-    <nav
-      css={css`
-        margin-top: 0;
-      `}
-    >
-      <NavLink to="/" activeClassName="current-page">
-        Home
-      </NavLink>
-      <NavLink to="/about" activeClassName="current-page">
-        About
-      </NavLink>
-    </nav>
-  </header>
-);
+const Nav = styled.nav`
+  margin-top: 0;
+  margin-left: auto;
+`;
+
+function Header() {
+  return (
+    <StyledHeader>
+      <NavLink to="/"><img src="../Logo_sidebyside.svg" alt="Krystal Klumpp logo" /></NavLink>
+      <Nav>
+        <NavLink to="/" activeClassName="current-page">
+          Home
+        </NavLink>
+        <NavLink to="/presentations" activeClassName="current-page">
+          Presentations
+        </NavLink>
+      </Nav>
+    </StyledHeader>
+  );
+}
 
 export default Header;

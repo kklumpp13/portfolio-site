@@ -1,8 +1,19 @@
 import React from 'react';
-import GlobalStyle, { css } from './global-style';
+import styled from 'styled-components';
+import GlobalStyle from './global-style';
 import Helmet from 'react-helmet';
 import Header from './header';
+import Footer from './footer';
 import useSiteMetadata from '../hooks/use-sitemetadata';
+
+const Main = styled.main`
+  margin: 0 auto;
+
+  // Max-width: 14400px
+  @media screen and (min-width: 62.5em) {
+    max-width: 90rem; 
+  }
+`;
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -13,18 +24,13 @@ const Layout = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700|Roboto:400,500,700&display=swap" rel="stylesheet" />
       </Helmet>
       <Header />
-      <main
-        css={css`
-          margin: 2rem auto 4rem;
-          max-width: 90vw;
-          width: 550px;
-        `}
-      >
+      <Main>
         {children}
-      </main>
+      </Main>
+      <Footer />
     </>
   );
 };

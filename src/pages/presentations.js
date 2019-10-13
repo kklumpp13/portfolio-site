@@ -4,8 +4,8 @@ import Layout from '../layout/layout';
 
 export default () => (
   <Layout>
-    <h1>Test page</h1>
-    <p>Testing</p>
-    <Link to="/">Home</Link>
+    <h1>Presentations</h1>
+    <h2>Slides</h2>
+    <Link to="/slides/accessible-forms">Developing accessible forms</Link>
   </Layout>
 );

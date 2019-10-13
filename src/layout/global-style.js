@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { mediumBlue, lightGray, primaryText, white } from '../css/colors';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -12,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     margin: 0;
-    color: #555;
+    color: ${primaryText};
     font-size: 100%;
     line-height: 1.5;
 
@@ -29,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #222;
+    color: ${primaryText};
     font-family: 'Fira Sans', sans-serif;
   
     + * + {
@@ -37,8 +38,38 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  a {
+    border: 1px solid ${white};
+    border-radius: 2px;
+    color: ${mediumBlue};
+    padding: 4px;
+
+    &:hover {
+      background-color: ${lightGray};
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid ${mediumBlue}
+    }
+  }
+
   strong {
-    color: #222;
+    color: ${primaryText};
   }
 
   .visually-hidden {
